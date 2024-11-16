@@ -1,13 +1,23 @@
 {
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Compile And Run Verilog",
+            "label": "Complile and Run Verilog",
             "type": "shell",
-            "command": "",
+            "command": "cmd.exe",
             "args": [
-                "iverilog -o ${fileDirname}/${fileBasenameNoExtension}.vvp ${file} && vvp ${fileDirname}/${fileBasenameNoExtension}.vvp"
-            ],
+            "/c",
+            "iverilog",
+            "-o" ,
+            "${fileDirname}/${fileBasenameNoExtension}.vvp", 
+            "${file}", 
+            "&&", 
+            "vvp", 
+            "${fileDirname}/${fileBasenameNoExtension}.vvp"
+        ],
+            "problemMatcher": [],
             "group": {
                 "kind": "build",
                 "isDefault": true
