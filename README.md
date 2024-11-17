@@ -1,4 +1,4 @@
-INSTALL GIT
+Install GIT
 
 open terminal in your working directory
 
